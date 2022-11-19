@@ -131,7 +131,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / "carbonaltdel" / "staticfiles_build" / "static"
+STATIC_ROOT = BASE_DIR / "staticfiles_build" / "static"
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
