@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
         {
-            "src": "carbonaltdel/carbonaltdel/wsgi.py",
+            "src": "carbonaltdel/wsgi.py",
             "use": "@vercel/python",
             "config": {
                 "maxLambdaSize": "15mb",
@@ -25,7 +25,7 @@
         },
         {
             "src": "/(.*)",
-            "dest": "carbonaltdel/carbonaltdel/wsgi.py"
+            "dest": "carbonaltdel/wsgi.py"
         }
     ]
 }
