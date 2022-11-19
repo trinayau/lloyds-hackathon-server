@@ -1,7 +1,4 @@
-from rest_framework.views import APIView
+from django.http import HttpResponse
 
-from rest_framework.response import Response
-
-class HomeView(APIView):
-    def get(self, request, format=None):
-        return Response('Hello, this is the Django REST API for www.carbonaltdel.com')
+def index(request):
+    return HttpResponse("Hello! You're at the wwww.carbonaltdel.com Django REST API. In the future, you will not be able to access this page. Please use the API endpoints instead.")
