@@ -10,9 +10,6 @@ django-cors-headers = "*"
 djoser = "*"
 stripe = "*"
 pillow = "*"
-psycopg2-binary = "*"
-dj-database-url = "*"
-python-decouple = "*"
 
 [dev-packages]
 
