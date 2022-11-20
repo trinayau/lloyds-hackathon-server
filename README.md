@@ -26,6 +26,7 @@ To run the tests, run `python manage.py test`.
 
 ## Deployment
 The server is deployed on Heroku. To deploy, run `git push heroku master`.
+haha
 
 ## Contributing
 1. Fork the repository
