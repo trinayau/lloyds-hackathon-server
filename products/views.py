@@ -31,3 +31,10 @@ class CategoryDetail(APIView):
         print(category)
         serializer = CategorySerializer(category)
         return Response(serializer.data)
+
+# List all categories
+class CategoryList(APIView):
+    def get(self, request, format=None):
+        categories = Category.objects.all()
+        serializer = CategorySerializer(categories, many=True)
+        return Response(serializer.data)
