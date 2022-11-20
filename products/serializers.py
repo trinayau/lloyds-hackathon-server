@@ -11,11 +11,11 @@ class ProductSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Product
-        fields = ['id', 'category', 'name', 'supplier', 'slug', 'price', 'weight', 'offset', 'date_added', 'get_image','get_thumbnail','emission_calculated']
+        fields = ['id', 'category', 'name', 'supplier', 'slug', 'price', 'weight', 'offset', 'date_added','emission_calculated']
 
 class CategorySerializer(serializers.ModelSerializer):
     products = ProductSerializer(many=True, read_only=True)
     class Meta:
         model = Category
-        fields = ('id', 'name', 'slug', 'description', 'get_image', 'get_thumbnail','products')
+        fields = ('id', 'name', 'slug', 'description','image_url','products')
 
