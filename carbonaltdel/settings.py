@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'products'
 ]
 
-CORS_ALLOWED_ORIGINS = ["http://localhost:3000", ]
+CORS_ALLOW_ALL_ORIGINS = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -98,6 +98,7 @@ DATABASES['default'] = dj_database_url.config()
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {
