@@ -4,15 +4,20 @@ from django.db.models import Min
 
 class ProductSerializer(serializers.ModelSerializer):
     emission_calculated = serializers.SerializerMethodField('_emission_calculated')
+    image = serializers.SerializerMethodField('get_image_from_category')
 
     def _emission_calculated(self, product_object):
         weight = getattr(product_object, "weight")
         if weight:
             return weight * product_object.offset
-
+    
+    def get_image_from_category(self, product_object):
+        category = getattr(product_object, "category")
+        if category:
+            return category.image_url
     class Meta:
         model = Product
-        fields = ['id', 'category', 'name', 'supplier', 'slug', 'price', 'weight', 'offset', 'date_added','emission_calculated']
+        fields = ['id', 'category', 'name', 'supplier', 'slug', 'price', 'weight', 'offset', 'date_added','emission_calculated', 'image']
 
 class CategorySerializer(serializers.ModelSerializer):
     products = ProductSerializer(many=True, read_only=True)
